@@ -1,77 +1,151 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>خدماتك على خمسات</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f4f4f4;
-            text-align: center;
-        }
-        header {
-            background: #4a90e2;
-            color: white;
-            padding: 40px 20px;
-        }
-        h1 {
-            margin: 0;
-            font-size: 32px;
-        }
-        p {
-            font-size: 18px;
-            margin: 10px 0 25px;
-        }
-        .btn {
-            background: #fff;
-            color: #4a90e2;
-            padding: 12px 30px;
-            border-radius: 8px;
-            font-size: 18px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .section {
-            padding: 40px 20px;
-        }
-        .box {
-            background: #fff;
-            padding: 20px;
-            margin: 10px auto;
-            max-width: 500px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px #00000015;
-        }
-    </style>
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hamada Azab - Gaming Style</title>
 
+<style>
+    body {
+        margin: 0;
+        font-family: sans-serif;
+        background: #000;
+        overflow-x: hidden;
+    }
+
+    /* خلفية نيون متحركة */
+    .bg {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0; left: 0;
+        background: radial-gradient(circle at center, #0ff3, #000);
+        animation: pulse 5s infinite alternate;
+        z-index: -1;
+    }
+
+    @keyframes pulse {
+        0% { filter: blur(40px); opacity: 0.6; }
+        100% { filter: blur(70px); opacity: 1; }
+    }
+
+    header {
+        text-align: center;
+        padding: 50px 20px;
+        color: #fff;
+    }
+
+    h1 {
+        font-size: 40px;
+        text-shadow: 0 0 20px #00eaff;
+    }
+
+    p {
+        font-size: 18px;
+        color: #ddd;
+    }
+
+    /* زر تواصل */
+    .btn {
+        display: inline-block;
+        padding: 15px 30px;
+        margin-top: 20px;
+        font-size: 20px;
+        background: linear-gradient(45deg, #ff003c, #00eaff);
+        border-radius: 12px;
+        color: white;
+        text-decoration: none;
+        box-shadow: 0 0 20px #00eaff;
+        transition: 0.2s;
+    }
+    .btn:active {
+        transform: scale(0.9);
+        box-shadow: 0 0 40px #ff003c;
+    }
+
+    /* الأقسام */
+    .box {
+        background: #111;
+        border: 1px solid #333;
+        margin: 20px;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 0 15px #00eaff44;
+        color: white;
+        transition: 0.2s;
+    }
+    .box:active {
+        transform: scale(0.97);
+        box-shadow: 0 0 25px #ff003c;
+    }
+
+    /* زر المشاركة */
+    .share-btn {
+        position: fixed;
+        bottom: 25px;
+        left: 25px;
+        background: #00eaff;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 26px;
+        color: black;
+        box-shadow: 0 0 20px #00eaff;
+        transition: 0.2s;
+    }
+    .share-btn:active {
+        transform: scale(0.8);
+        box-shadow: 0 0 40px #ff003c;
+    }
+</style>
+
+</head>
 <body>
 
+<div class="bg"></div>
+
 <header>
-    <h1>أهلاً بيك 👋</h1>
-    <p>هنا هتلاقي كل خدماتي في تصميم الفيديوهات والمقالات والـ PDF</p>
-    <a class="btn" href="#">تواصل معي</a>
+    <h1>🔥 Hamada Azab 🔥</h1>
+    <p>تصميم فيديوهات – كتابة مقالات – PDF – محتوى كامل احترافي</p>
+    <a class="btn" href="https://wa.me/201234567890">تواصل معي</a>
 </header>
 
-<div class="section">
-    <div class="box">
-        <h2>تصميم فيديوهات</h2>
-        <p>تحويل النص لفيديو احترافي بجودة عالية.</p>
-    </div>
-
-    <div class="box">
-        <h2>كتابة مقالات</h2>
-        <p>كتابة مقالات جذابة ومحسّنة للسيو.</p>
-    </div>
-
-    <div class="box">
-        <h2>تصميم PDF</h2>
-        <p>تنسيق ملفات PDF بجودة ممتازة.</p>
-    </div>
+<div class="box">
+    <h2>🎬 تصميم فيديوهات</h2>
+    <p>تحويل النص لفيديو جيمينج احترافي بجودة ممتازة.</p>
 </div>
+
+<div class="box">
+    <h2>✍️ كتابة مقالات</h2>
+    <p>مقالات محسّنة للـ SEO جاهزة للنشر.</p>
+</div>
+
+<div class="box">
+    <h2>📄 تصميم PDF</h2>
+    <p>تصميم ملفات PDF احترافي.</p>
+</div>
+
+<!-- زر مشاركة -->
+<div class="share-btn" onclick="share()">
+    ↻
+</div>
+
+<script>
+function share() {
+    if (navigator.share) {
+        navigator.share({
+            title: 'Hamada Azab',
+            text: 'تعال شوف خدماتي!',
+            url: window.location.href
+        });
+    } else {
+        alert("المشاركة غير مدعومة على هذا الجهاز");
+    }
+}
+</script>
 
 </body>
 </html>
