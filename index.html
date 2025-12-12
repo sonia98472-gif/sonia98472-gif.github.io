@@ -1,166 +1,114 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hamada Azab</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Hamada Azab</title>
 
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Cairo', sans-serif;
-            text-align: center;
+<style>
+    body {
+        margin: 0;
+        font-family: "Cairo", sans-serif;
+        background: url("https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1400&q=80") no-repeat center center/cover;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 15px;
+    }
 
-            /* Galaxy + Neon */
-            background: radial-gradient(circle at top, #00eaff33 0%, #00112b 40%, #00010a 100%);
-            background-attachment: fixed;
-            overflow-x: hidden;
-            color: #00eaff;
-        }
+    .container {
+        width: 100%;
+        max-width: 500px;
+        background: rgba(0, 0, 0, 0.35);
+        backdrop-filter: blur(15px);
+        padding: 30px 20px;
+        border-radius: 25px;
+        box-shadow: 0 0 25px rgba(0,0,0,0.35);
+        text-align: center;
+    }
 
-        /* طبقة النجوم */
-        .stars {
-            width: 100%;
-            height: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            background: transparent url("https://i.ibb.co/qj4wqJ9/stars.png") repeat;
-            animation: moveStars 40s linear infinite;
-            pointer-events: none;
-            opacity: 0.7;
-        }
+    h1 {
+        margin-top: 0;
+        font-size: 30px;
+        color: #00eaff;
+        font-weight: 700;
+        text-shadow: 0 0 10px #00eaff;
+    }
 
-        @keyframes moveStars {
-            from { background-position: 0 0; }
-            to { background-position: 0 1000px; }
-        }
+    .btn {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        background: rgba(0, 30, 60, 0.8);
+        color: white;
+        padding: 15px;
+        border-radius: 18px;
+        margin: 12px 0;
+        text-decoration: none;
+        font-size: 20px;
+        transition: 0.25s;
+        backdrop-filter: blur(4px);
+    }
 
-        /* صندوق اللينكات */
-        .box {
-            margin-top: 140px;
-            width: 85%;
-            max-width: 400px;
-            padding: 25px;
-            background: rgba(255,255,255,0.07);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.2);
-            border-radius: 16px;
-            margin-left: auto;
-            margin-right: auto;
-            box-shadow: 0 0 20px #00eaff55;
-            animation: fadeIn 1.5s ease;
-        }
+    .btn:hover {
+        transform: scale(1.05);
+        background: rgba(0, 50, 90, 0.9);
+    }
 
-        /* اسمك */
-        h1 {
-            font-size: 32px;
-            margin-bottom: 5px;
-            text-shadow: 0 0 15px #00eaff;
-        }
+    .btn img {
+        width: 32px;
+        height: 32px;
+    }
 
-        /* الروابط */
-        .btn {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            justify-content: flex-start;
+    .sound-btn {
+        margin-top: 20px;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 12px;
+        border-radius: 15px;
+        color: #fff;
+        font-size: 18px;
+        display: inline-block;
+        text-decoration: none;
+        transition: 0.25s;
+    }
 
-            margin: 12px 0;
-            padding: 14px;
-            background: rgba(0, 30, 50, 0.6);
-            border-radius: 12px;
-            color: #fff;
-            font-size: 19px;
-            text-decoration: none;
-            border: 1px solid #00eaff55;
-            transition: 0.25s;
-        }
-
-        .btn:hover {
-            transform: scale(1.06);
-            box-shadow: 0 0 20px #00eaffaa;
-            background: rgba(0, 55, 90, 0.8);
-        }
-
-        .btn img {
-            width: 28px;
-            height: 28px;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* زر الصوت */
-        #soundBtn {
-            position: fixed;
-            bottom: 25px;
-            left: 25px;
-            background: rgba(0,0,0,0.5);
-            padding: 12px 18px;
-            color: white;
-            border-radius: 10px;
-            border: 1px solid #00eaff;
-            cursor: pointer;
-            backdrop-filter: blur(5px);
-        }
-    </style>
+    .sound-btn:hover {
+        transform: scale(1.07);
+        background: rgba(0, 0, 0, 0.7);
+    }
+</style>
 </head>
 
 <body>
 
-<!-- نجوم -->
-<div class="stars"></div>
+<div class="container">
 
-<!-- صندوق الروابط -->
-<div class="box">
     <h1>Hamada Azab</h1>
 
-    <a class="btn" href="https://www.facebook.com/share/17dJkFRjzo/">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+    <a class="btn" href="#">
+        <img src="https://i.ibb.co/FWzN1z0/facebook.png">
         Facebook
     </a>
 
-    <a class="btn" href="https://www.instagram.com/hamadaazab?igsh=cm00MzE3ZGdocGQ=">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+    <a class="btn" href="#">
+        <img src="https://i.ibb.co/zQz0VQf/instagram.png">
         Instagram
     </a>
 
-    <a class="btn" href="https://wa.me/">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+    <a class="btn" href="#">
+        <img src="https://i.ibb.co/x18ZkMG/whatsapp.png">
         WhatsApp
     </a>
 
-    <a class="btn" href="https://t.me/PD_El3zb">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png">
+    <a class="btn" href="#">
+        <img src="https://i.ibb.co/7j9dZZL/telegram.png">
         Telegram
     </a>
+
+    <a class="sound-btn" href="#">🔇 إيقاف الصوت</a>
+
 </div>
-
-<!-- الصوت -->
-<audio id="bgSound" autoplay loop>
-    <source src="sound.mp3" type="audio/mpeg">
-</audio>
-
-<div id="soundBtn">🔇 تشغيل الصوت</div>
-
-<script>
-let audio = document.getElementById("bgSound");
-let btn = document.getElementById("soundBtn");
-
-btn.onclick = function () {
-    if (audio.paused) {
-        audio.play();
-        btn.innerHTML = "🔊 إيقاف الصوت";
-    } else {
-        audio.pause();
-        btn.innerHTML = "🔇 تشغيل الصوت";
-    }
-};
-</script>
 
 </body>
 </html>
