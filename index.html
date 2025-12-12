@@ -16,7 +16,6 @@
         color: white;
     }
 
-    /* خلفية دخان + تموجات */
     .bg-smoke {
         position: fixed;
         top: 0; left: 0;
@@ -27,7 +26,6 @@
         z-index: -3;
     }
 
-    /* موجات نيون */
     .waves {
         position: fixed;
         width: 100%;
@@ -37,7 +35,6 @@
         opacity: 0.35;
     }
 
-    /* الجزيئات */
     #particles-js {
         position: fixed;
         width: 100%;
@@ -46,7 +43,6 @@
         z-index: -1;
     }
 
-    /* العنوان */
     h1 {
         text-align: center;
         margin-top: 40px;
@@ -65,7 +61,6 @@
         to { text-shadow: 0 0 25px #0ff; }
     }
 
-    /* صندوق الروابط */
     .links {
         width: 90%;
         max-width: 450px;
@@ -96,11 +91,11 @@
         box-shadow: 0 0 15px #0ff;
     }
 
-    .icon {
-        font-size: 26px;
+    .icon svg {
+        width: 30px;
+        height: 30px;
     }
 
-    /* زر الصوت */
     #soundBtn {
         position: fixed;
         bottom: 20px;
@@ -131,36 +126,94 @@
 
 <div class="links">
 
+    <!-- Facebook -->
     <a class="link-box" href="https://www.facebook.com/share/17dJkFRjzo/">
-        <span class="icon">📘</span> Facebook
+        <span class="icon">
+            <svg viewBox="0 0 24 24" fill="#1877F2">
+                <path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-3h2.5V9.5c0-2.5 
+                1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.2c-1.2 
+                0-1.6.8-1.6 1.6V12H17l-.5 3h-2.2v7A10 10 0 0 0 22 12"/>
+            </svg>
+        </span> Facebook
     </a>
 
+    <!-- YouTube -->
     <a class="link-box" href="https://youtube.com/@neotranform2">
-        <span class="icon">📺</span> YouTube
+        <span class="icon">
+            <svg viewBox="0 0 24 24" fill="#FF0000">
+                <path d="M23 7s-.2-1.6-.8-2.3a3 3 0 0 0-2.1-.9C17.1 
+                3.5 12 3.5 12 3.5s-5.1 0-8.1.3a3 3 0 0 0-2.1.9C1.2 
+                5.4 1 7 1 7s-.2 1.8-.2 3.6v1.8C.8 14.2 1 16 1 16s.2 
+                1.6.8 2.3a3.2 3.2 0 0 0 2.2.9c1.6.2 6.8.3 6.8.3s5.1 
+                0 8.1-.3a3 3 0 0 0 2.1-.9c.6-.7.8-2.3.8-2.3s.2-1.8.2-3.6
+                V10.6C23.2 8.8 23 7 23 7ZM9.8 14.5v-5l5.5 2.5-5.5 2.5Z"/>
+            </svg>
+        </span> YouTube
     </a>
 
+    <!-- TikTok -->
     <a class="link-box" href="https://www.tiktok.com/@hamada.azab10">
-        <span class="icon">🎵</span> TikTok
+        <span class="icon">
+            <svg viewBox="0 0 24 24">
+                <path fill="#25F4EE" d="M16.5 3a4.5 4.5 0 0 0 4 4v3.1a8 
+                8 0 0 1-4-1.1v6.3a6.2 6.2 0 1 1-6.2-6.2c.5 0 1 .1 
+                1.4.2v3.2c-.3-.1-.6-.2-1-.2a2.9 2.9 0 1 0 2.9 2.9V3h2.9Z"/>
+                <path fill="#FE2C55" d="M16.5 3v2.2c-1.3-.3-2.3-1-2.9-2.2h2.9Z"/>
+            </svg>
+        </span> TikTok
     </a>
 
+    <!-- Instagram -->
     <a class="link-box" href="https://www.instagram.com/hamadaazab">
-        <span class="icon">📸</span> Instagram
+        <span class="icon">
+            <svg viewBox="0 0 24 24">
+                <defs>
+                    <linearGradient id="ig" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#fdf497"/>
+                        <stop offset="30%" stop-color="#fd5949"/>
+                        <stop offset="60%" stop-color="#d6249f"/>
+                        <stop offset="100%" stop-color="#285AEB"/>
+                    </linearGradient>
+                </defs>
+                <path fill="url(#ig)" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 
+                0 0 1-5-5V7a5 5 0 0 1 5-5Zm5 5.5a4.5 4.5 0 1 0 0 9 
+                4.5 4.5 0 0 0 0-9Zm6.5-.8a1.2 1.2 0 1 0 0-2.4 1.2 
+                1.2 0 0 0 0 2.4Z"/>
+            </svg>
+        </span> Instagram
     </a>
 
+    <!-- WhatsApp -->
     <a class="link-box" href="https://whatsapp.com/dl/">
-        <span class="icon">💬</span> WhatsApp
+        <span class="icon">
+            <svg viewBox="0 0 24 24" fill="#25D366">
+                <path d="M12 2a10 10 0 0 0-8.5 15.4L2 22l4.8-1.5A10 
+                10 0 1 0 12 2Zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 
+                16Zm4.2-5.2c-.2-.3-.7-.5-1.5-.9s-1-.4-1.3.1-.5.6-.8.9
+                -.6.1-1.2-.3a6 6 0 0 1-2-2.5c0-.4.1-.6.4-.9s.4-.5.6-.8
+                0-.6-.1-.8c-.1-.2-.8-2-1.1-2.7-.2-.6-.5-.6-.8-.6h-.6
+                c-.2 0-.6.1-.9.5s-1.1 1.1-1.1 2.7 1.1 3.1 1.2 3.3a10 
+                10 0 0 0 4 3.6c2.4 1 3 .9 3.6.8s1.8-.7 2-1.4.2-1.3.2-1.4
+                -.2-.4-.4-.6Z"/>
+            </svg>
+        </span> WhatsApp
     </a>
 
+    <!-- Telegram -->
     <a class="link-box" href="https://t.me/PD_El3zb">
-        <span class="icon">📨</span> Telegram
+        <span class="icon">
+            <svg viewBox="0 0 24 24" fill="#0088CC">
+                <path d="M9.5 14.3 9.3 18c.4 0 .6-.2.8-.4l2-2 
+                4.3 3.2c.8.4 1.4.2 1.6-.8L22 5.3c.3-1-.3-1.4-1.1-1L3 
+                11.3c-1 .4-1 1-.2 1.3l4.7 1.5L18 6.5 9.5 14.3Z"/>
+            </svg>
+        </span> Telegram
     </a>
 
 </div>
 
-<!-- زر التحكم بالصوت -->
 <div id="soundBtn">🔇 تشغيل الموسيقى</div>
 
-<!-- الصوت -->
 <audio id="bgSound" autoplay loop>
     <source src="sound.mp3" type="audio/mpeg">
 </audio>
@@ -180,7 +233,6 @@ soundBtn.onclick = () => {
 };
 </script>
 
-<!-- جزيئات -->
 <script>
 particlesJS("particles-js", {
     "particles": {
@@ -193,7 +245,6 @@ particlesJS("particles-js", {
 });
 </script>
 
-<!-- موجات (Canvas Neón Waves) -->
 <script>
 const canvas = document.getElementById("waves");
 const ctx = canvas.getContext("2d");
